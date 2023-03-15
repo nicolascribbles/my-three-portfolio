@@ -5,7 +5,22 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nicola Reyes Three.js App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital@1&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'exo': `'Exo 2', sans-serif`
+            }
+          }
+        },
+      }
+    </script>
+    
     <style>
       body {
         margin: 0;
@@ -14,7 +29,7 @@
   </head>
   <body>
     <div id="app">
-      <div class="absolute text-white">
+      <div class="absolute text-white text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-exo">
         <h1>Nicola Reyes</h1>
         <p>ONE WITH AN EVERLASTING DESIRE FOR THE UNKNOWN & UNTOLD</p>
         <button>View Work</button>
