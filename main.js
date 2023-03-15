@@ -232,6 +232,13 @@ addEventListener('mousemove', (event) => {
 
 });
 
+addEventListener('resize', () => {
+    camera.aspect = innerWidth / innerHeight;
+    camera.updateProjectionMatrix();
+    
+    renderer.setSize(innerWidth, innerHeight);
+});
+
 gsap.to('#nicolaReyes', {
     opacity: 1,
     duration: 1.5,
@@ -275,7 +282,10 @@ document
             y: 1000,
             ease: 'power3.in',
             duration: 1,
-            delay: 2
+            delay: 2,
+            onComplete: () => {
+                window.location.href = 'https://www.nicolacodes.com/'
+            }
         })
         
     })
