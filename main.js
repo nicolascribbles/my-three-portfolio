@@ -9,7 +9,12 @@ import {
     DoubleSide, 
     Mesh,
     Raycaster,
-    BufferAttribute } from 'three';
+    BufferAttribute,
+    BufferGeometry,
+    PointsMaterial,
+    Float32BufferAttribute,
+    Points
+ } from 'three';
 
 
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -113,6 +118,25 @@ new OrbitControls(camera, renderer.domElement);
 // moving the camera back so we can see the cube
 camera.position.z = 50;
 
+const starGeometry = new BufferGeometry()
+const starMaterial = new PointsMaterial({
+    color: 0xffffff
+})
+
+const starVertices = [];
+for (let i = 0; i < 10000; i++) {
+    const x = (Math.random() - 0.5) * 2000;
+    const y = (Math.random() - 0.5) * 2000;
+    const z =  (Math.random() - 0.5) * 2000;
+    starVertices.push(x, y, z);
+}
+
+starGeometry.setAttribute('position', new Float32BufferAttribute(starVertices, 3))
+
+const stars = new Points(starGeometry, starMaterial);
+
+scene.add(stars)
+
 const mouse = {
     x: undefined,
     y: undefined
@@ -191,6 +215,8 @@ function animate() {
             }
         })
     }
+
+    stars.rotation.x += 0.0005;
 }
 animate()
 
