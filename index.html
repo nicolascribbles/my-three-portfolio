@@ -7,14 +7,15 @@
     <title>Nicola Reyes Three.js App</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,400;1,700&family=Space+Mono&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              'exo': `'Exo 2', sans-serif`
+              'exo': `'Exo 2', sans-serif`,
+              'mono': `'Space Mono', monospace`
             }
           }
         },
@@ -24,14 +25,15 @@
     <style>
       body {
         margin: 0;
+        -webkit-font-smoothing: antialiased;
       }
     </style>
   </head>
   <body>
     <div id="app">
       <div class="absolute text-white text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-exo">
-        <h1>Nicola Reyes</h1>
-        <p>ONE WITH AN EVERLASTING DESIRE FOR THE UNKNOWN & UNTOLD</p>
+        <h1 class="font-mono text-sm uppercase tracking-wider">Nicola Reyes</h1>
+        <p class="text-2xl font-bold">ONE WITH AN EVERLASTING DESIRE FOR THE UNKNOWN & UNTOLD</p>
         <button>View Work</button>
       </div>
     </div>
