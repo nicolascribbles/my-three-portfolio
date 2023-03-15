@@ -232,4 +232,52 @@ addEventListener('mousemove', (event) => {
 
 });
 
+gsap.to('#nicolaReyes', {
+    opacity: 1,
+    duration: 1.5,
+    y: 0,
+    ease: 'expo'
+})
+gsap.to('#oneWith', {
+    delay: .3,
+    opacity: 1,
+    duration: 1.5,
+    y: 0,
+    ease: 'expo'
+
+})
+gsap.to('#workButton', {
+    delay: .6,
+    opacity: 1,
+    duration: 1.5,
+    y: 0,
+    ease: 'expo'
+})
+
+document
+    .querySelector('#workButton')
+    .addEventListener('click', (e) => {
+        e.preventDefault();
+        gsap.to('#homeAtf', {
+            opacity: 0,
+        })
+        gsap.to(camera.position, {
+            z: 25,
+            ease: 'power3.inOut',
+            duration: 1.5
+        })
+        gsap.to(camera.rotation, {
+            x: 1.57,
+            ease: 'power3.inOut',
+            duration: 1.5
+        })
+        gsap.to(camera.position, {
+            y: 1000,
+            ease: 'power3.in',
+            duration: 1.5
+        })
+        
+    })
+
+
 document.body.appendChild(renderer.domElement);
