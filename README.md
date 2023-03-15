@@ -7,3 +7,4 @@
 - Three.js
 - GSAP
 - dat.gui
+- TailwindCSS

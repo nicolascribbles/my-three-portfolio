@@ -130,8 +130,6 @@ function animate() {
         array[i] = originalPosition[i] + Math.cos(frame + randomValues[i]) * 0.003;
         
         array[i + 1] = originalPosition[i + 1] + Math.sin(frame + randomValues[i + 1]) * 0.003;
-        
-        // array[i + 2] = originalPosition[i] + Math.cos(frame + randomValues[i + 2]) * 0.003;
     }
     
     planeMesh.geometry.attributes.position.needsUpdate = true;
