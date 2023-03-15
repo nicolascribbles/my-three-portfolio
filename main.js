@@ -264,17 +264,18 @@ document
         gsap.to(camera.position, {
             z: 25,
             ease: 'power3.inOut',
-            duration: 1.5
+            duration: 2
         })
         gsap.to(camera.rotation, {
             x: 1.57,
             ease: 'power3.inOut',
-            duration: 1.5
+            duration: 2
         })
         gsap.to(camera.position, {
             y: 1000,
             ease: 'power3.in',
-            duration: 1.5
+            duration: 1,
+            delay: 2
         })
         
     })
